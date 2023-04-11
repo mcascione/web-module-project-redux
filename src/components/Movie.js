@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import { deleteMovie } from '../actions/movieActions';
 
+
 const Movie = (props) => {
     const { id } = useParams();
     const { push } = useHistory();
-
     const { movies, deleteMovie } = props;
     const movie = movies.find(movie=>movie.id===Number(id));
 
